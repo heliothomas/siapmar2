@@ -1,0 +1,7 @@
+#Ignorar archivos y carpetas
+/build
+/dist
+/nbproject
+manifest.mf
+*.form
+*Thumbs.db
