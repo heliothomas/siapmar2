@@ -1,12 +1,10 @@
 package org.vistahermosa.ui;
 
 import com.seaglasslookandfeel.SeaGlassLookAndFeel;
-import de.javasoft.plaf.synthetica.SyntheticaLookAndFeel;
-import de.javasoft.plaf.synthetica.SyntheticaStandardLookAndFeel;
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
-import java.text.ParseException;
 import javax.swing.*;
+import org.vistahermosa.util.Util;
 import org.vistahermosa.util.dialog.DConfConxBD;
 //import modelo.D_Login;
 //import sc.MultiThreading;
@@ -20,10 +18,12 @@ String letras = "[a-zA-Z]*";
 
     public Login() {
         initComponents();
-        
+//        AWTUtilities.setWindowOpacity(this, 0.65f);//Apply transparency
 //        tfUN.setDocument(new TextLimiter(20));
 //        pfPass.setDocument(new TextLimiter(20));
         
+        tfUN.setColumns(3);
+        this.setIconImage(Toolkit.getDefaultToolkit().getImage(Util.getURL("controlpanel.png")));
         setLocationRelativeTo(null);
     }
     
@@ -160,7 +160,7 @@ String letras = "[a-zA-Z]*";
     }//GEN-LAST:event_btLoginActionPerformed
 
     private void pfPassKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pfPassKeyReleased
-        senalarMayus();
+        lbResult.setText(Util.senalarMayus());
         
         Character d = evt.getKeyChar();
         //Si pulsa la tecla Enter se dirige a la función login()
@@ -179,7 +179,7 @@ String letras = "[a-zA-Z]*";
     }//GEN-LAST:event_cbOlvidoActionPerformed
 
     private void pfPassFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pfPassFocusGained
-        senalarMayus();
+        lbResult.setText(Util.senalarMayus());
     }//GEN-LAST:event_pfPassFocusGained
 
     private void btConfConxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConfConxActionPerformed
@@ -187,14 +187,6 @@ String letras = "[a-zA-Z]*";
         confConx.setLocationRelativeTo(null);
         confConx.setVisible(true);
     }//GEN-LAST:event_btConfConxActionPerformed
-
-    private void senalarMayus(){
-        if (Toolkit.getDefaultToolkit().getLockingKeyState(KeyEvent.VK_CAPS_LOCK)==true) {
-            lbResult.setText("La tecla Bloq Mayus está activada");
-        }else{
-            lbResult.setText("La tecla Bloq Mayus ahora está desactivada");
-        }
-    }
 
     public void login(){
 /*
@@ -218,28 +210,19 @@ String letras = "[a-zA-Z]*";
 */
     }
 
-    //Acá se pone un ícono al formulario
-//    @Override
-//    public Image getIconImage(){
-//        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imgsys/controlpanel.png"));
-//        return retValue;
-//    }
-
     //Función donde se invoca y se ejecuta el formulario
     public static void main(String args[]) {
         try {
-            //"de.javasoft.plaf.synthetica.SyntheticaStandardLookAndFeel"
             UIManager.setLookAndFeel(new SeaGlassLookAndFeel());
         } catch (UnsupportedLookAndFeelException e) {
             JOptionPane.showMessageDialog(null, "Error with look and feel: " + e.getMessage());
         }
         
-        
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new Login().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            try {
+                Thread.sleep(0);
+            } catch (Exception e) { }
+            new Login().setVisible(true);
         });
     }
 

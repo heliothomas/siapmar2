@@ -12,29 +12,36 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.io.File;
+import java.math.BigDecimal;
+import java.net.InetAddress;
+import java.net.URL;
+import java.net.UnknownHostException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JOptionPane;
-import javax.swing.LookAndFeel;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  *
  * @author thomas
  */
 public class Util {
-    public static final String src = "org/vistahermosa/resources/img/sys/";
-    public static final String os = System.getProperty("os.name").toLowerCase();
-
-    public static String putImage(final String filename) {
-        return src + filename;
-    }
+    //System.getProperty("user.dir") +
+//    public static final String IMG = "\\org\\vistahermosa\\resources\\img\\";
+    public static final String IMG = "org/vistahermosa/resources/img/";
+    public static final String OS = System.getProperty("os.name").toLowerCase();
+    private static final Logger logger = LogManager.getLogger(Util.class);
     
     public static void setSkin(final String skinName, final JFrame frame) {
         try {
@@ -59,6 +66,7 @@ public class Util {
             frame.pack();
         } catch (ParseException | UnsupportedLookAndFeelException e) {
             JOptionPane.showMessageDialog(null, "Error with look and feel: " + e.getMessage());
+            logger.log(Level.ERROR, e.getMessage());
         }
     }
         
@@ -79,6 +87,50 @@ public class Util {
         for (ActionListener al : menuClock.getActionListeners()) {
             Timer t = new Timer(1000, al);
             t.start();
+        }
+    }
+    
+    public static URL getURL(final String fileName) {
+        Util u = new Util();
+        ClassLoader cl = u.getClass().getClassLoader();
+        return cl.getResource(IMG + fileName);
+    }
+    
+    public static String getHostNameIP() {
+        try {
+            return InetAddress.getLocalHost().toString();
+        } catch (UnknownHostException e) {
+            logger.log(Level.FATAL, e.getMessage());
+            return null;
+        }
+    }
+    public static Long[] getFreeTotalSpace(final String unit) {
+        final Long[] size = {};
+        final File file = new File("c:");
+    	final Long totalSpace = file.getTotalSpace(); //total disk space in bytes.
+    	final Long freeSpace = file.getFreeSpace();
+        if (unit.equalsIgnoreCase("mb")) {
+            size[0] = freeSpace / 1048576L;
+            size[1] = totalSpace / 1048576L;
+        }
+        if (unit.equalsIgnoreCase("gb")) {
+            size[0] = freeSpace / 1073741824L;
+            size[1] = totalSpace / 1073741824L;
+        }
+        return size;
+    }
+
+    public static BigDecimal getBigDec(final String number) {
+        BigDecimal bd = new BigDecimal(number);
+        return bd.setScale(2, BigDecimal.ROUND_HALF_UP);
+    }
+
+    public static String senalarMayus(){
+        if (Toolkit.getDefaultToolkit().getLockingKeyState(
+                KeyEvent.VK_CAPS_LOCK) == true) {
+            return "La tecla Bloq Mayus está activada";
+        } else {
+            return "La tecla Bloq Mayus ahora está desactivada";
         }
     }
 }

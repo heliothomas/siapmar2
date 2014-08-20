@@ -16,7 +16,7 @@ public class DAditional extends javax.swing.JDialog {
     public DAditional(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        lbOS.setText("Sistema Operativo: " + Util.os);
+        lbOS.setText("Sistema Operativo: " + Util.OS);
         lbScreen.setText("Resolución de Pantalla: " + Util.getResolution()[0] + 
                 " x " + Util.getResolution()[1]);
     }

@@ -44,7 +44,8 @@ ResultSet rs;
 
     public MenuMain() {
         initComponents();
-//        setLocationRelativeTo(null);
+        this.setIconImage(Toolkit.getDefaultToolkit().getImage(Util.getURL("controlpanel.png")));
+        setLocationRelativeTo(null);
         
         Util.setClock(menuClock);
 //        lbFondo.setIcon(null);
