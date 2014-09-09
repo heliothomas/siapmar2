@@ -125,7 +125,7 @@ public class Util {
         return bd.setScale(2, BigDecimal.ROUND_HALF_UP);
     }
 
-    public static String senalarMayus(){
+    public String senalarMayus(){
         if (Toolkit.getDefaultToolkit().getLockingKeyState(
                 KeyEvent.VK_CAPS_LOCK) == true) {
             return "La tecla Bloq Mayus está activada";

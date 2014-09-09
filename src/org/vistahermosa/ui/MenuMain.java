@@ -32,6 +32,7 @@ import org.vistahermosa.util.Util;
 import org.vistahermosa.util.dialog.DAbout;
 import org.vistahermosa.util.dialog.DAditional;
 import org.vistahermosa.util.dialog.DTest;
+import org.vistahermosa.util.dialog.DUser;
 
 public class MenuMain extends JFrame {
 
@@ -276,14 +277,16 @@ ResultSet rs;
                 JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
         if (i == 0) {
             JOptionPane.showMessageDialog(null, "Has elegido crear un nuevo alumno.");
-        } else if(i == 1) {
+        } else if (i == 1) {
             JOptionPane.showMessageDialog(null, "Has elegido actualizar un alumno.");
         }
     }//GEN-LAST:event_miAlumnoActionPerformed
 
     private void miUserAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miUserAccountActionPerformed
-        DTest test = new DTest(this, true);
-        test.setVisible(true);
+//        DTest test = new DTest(this, true);
+//        test.setVisible(true);
+        DUser user = new DUser(this, true);
+        user.setVisible(true);
     }//GEN-LAST:event_miUserAccountActionPerformed
 
     private void miSeaGlassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miSeaGlassActionPerformed

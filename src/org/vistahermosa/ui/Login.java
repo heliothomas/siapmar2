@@ -12,7 +12,7 @@ import org.vistahermosa.util.dialog.DConfConxBD;
 //import sc.TextLimiter;
 
 public class Login extends JFrame {
-
+private final Util util = new Util();
     //Este cadena de caracteres se usará para validar
 String letras = "[a-zA-Z]*";
 
@@ -160,7 +160,8 @@ String letras = "[a-zA-Z]*";
     }//GEN-LAST:event_btLoginActionPerformed
 
     private void pfPassKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pfPassKeyReleased
-        lbResult.setText(Util.senalarMayus());
+        
+        lbResult.setText(util.senalarMayus());
         
         Character d = evt.getKeyChar();
         //Si pulsa la tecla Enter se dirige a la función login()
@@ -179,7 +180,7 @@ String letras = "[a-zA-Z]*";
     }//GEN-LAST:event_cbOlvidoActionPerformed
 
     private void pfPassFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pfPassFocusGained
-        lbResult.setText(Util.senalarMayus());
+        lbResult.setText(util.senalarMayus());
     }//GEN-LAST:event_pfPassFocusGained
 
     private void btConfConxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConfConxActionPerformed
