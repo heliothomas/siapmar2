@@ -18,20 +18,12 @@ public class DMSViewMain extends javax.swing.JFrame {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
-        pnMain1 = new javax.swing.JPanel();
-        pnBanner1 = new javax.swing.JPanel();
-        pnContent1 = new javax.swing.JPanel();
-        pnSideBar1 = new javax.swing.JPanel();
-        pnMain2 = new javax.swing.JPanel();
-        pnBanner2 = new javax.swing.JPanel();
-        pnContent2 = new javax.swing.JPanel();
-        pnSideBar2 = new javax.swing.JPanel();
         pnMain = new javax.swing.JPanel();
         pnBanner = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        lbLogoDMS = new javax.swing.JLabel();
+        btLogOut = new javax.swing.JButton();
+        lbUser = new javax.swing.JLabel();
+        lbCompany = new javax.swing.JLabel();
         pnContent = new javax.swing.JPanel();
         pnSideBar = new javax.swing.JPanel();
         pnSideBarButtons = new javax.swing.JPanel();
@@ -48,153 +40,11 @@ public class DMSViewMain extends javax.swing.JFrame {
         btTraining = new javax.swing.JButton();
         btReports = new javax.swing.JButton();
 
-        pnMain1.setBackground(new java.awt.Color(255, 255, 102));
-        pnMain1.setName("pnMain1"); // NOI18N
-
-        pnBanner1.setBackground(new java.awt.Color(153, 0, 0));
-        pnBanner1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        pnBanner1.setName("pnBanner1"); // NOI18N
-        pnBanner1.setPreferredSize(new java.awt.Dimension(800, 100));
-
-        javax.swing.GroupLayout pnBanner1Layout = new javax.swing.GroupLayout(pnBanner1);
-        pnBanner1.setLayout(pnBanner1Layout);
-        pnBanner1Layout.setHorizontalGroup(
-            pnBanner1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        pnBanner1Layout.setVerticalGroup(
-            pnBanner1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 98, Short.MAX_VALUE)
-        );
-
-        pnContent1.setBackground(new java.awt.Color(255, 255, 255));
-        pnContent1.setName("pnContent1"); // NOI18N
-
-        javax.swing.GroupLayout pnContent1Layout = new javax.swing.GroupLayout(pnContent1);
-        pnContent1.setLayout(pnContent1Layout);
-        pnContent1Layout.setHorizontalGroup(
-            pnContent1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 694, Short.MAX_VALUE)
-        );
-        pnContent1Layout.setVerticalGroup(
-            pnContent1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        pnSideBar1.setBackground(new java.awt.Color(0, 0, 0));
-        pnSideBar1.setMinimumSize(new java.awt.Dimension(100, 394));
-        pnSideBar1.setName("pnSideBar1"); // NOI18N
-
-        javax.swing.GroupLayout pnSideBar1Layout = new javax.swing.GroupLayout(pnSideBar1);
-        pnSideBar1.setLayout(pnSideBar1Layout);
-        pnSideBar1Layout.setHorizontalGroup(
-            pnSideBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        pnSideBar1Layout.setVerticalGroup(
-            pnSideBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 394, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout pnMain1Layout = new javax.swing.GroupLayout(pnMain1);
-        pnMain1.setLayout(pnMain1Layout);
-        pnMain1Layout.setHorizontalGroup(
-            pnMain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnBanner1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(pnMain1Layout.createSequentialGroup()
-                .addComponent(pnSideBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pnContent1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        pnMain1Layout.setVerticalGroup(
-            pnMain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnMain1Layout.createSequentialGroup()
-                .addComponent(pnBanner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnMain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnSideBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnContent1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-
-        pnMain2.setBackground(new java.awt.Color(255, 255, 102));
-        pnMain2.setMinimumSize(new java.awt.Dimension(800, 500));
-        pnMain2.setName("pnMain2"); // NOI18N
-        pnMain2.setPreferredSize(new java.awt.Dimension(800, 500));
-        pnMain2.setLayout(new java.awt.GridBagLayout());
-
-        pnBanner2.setBackground(new java.awt.Color(153, 0, 0));
-        pnBanner2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        pnBanner2.setName("pnBanner2"); // NOI18N
-        pnBanner2.setPreferredSize(new java.awt.Dimension(800, 100));
-
-        javax.swing.GroupLayout pnBanner2Layout = new javax.swing.GroupLayout(pnBanner2);
-        pnBanner2.setLayout(pnBanner2Layout);
-        pnBanner2Layout.setHorizontalGroup(
-            pnBanner2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        pnBanner2Layout.setVerticalGroup(
-            pnBanner2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 98, Short.MAX_VALUE)
-        );
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.ipadx = 798;
-        gridBagConstraints.ipady = 98;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.FIRST_LINE_START;
-        pnMain2.add(pnBanner2, gridBagConstraints);
-
-        pnContent2.setBackground(new java.awt.Color(255, 255, 255));
-        pnContent2.setName("pnContent2"); // NOI18N
-
-        javax.swing.GroupLayout pnContent2Layout = new javax.swing.GroupLayout(pnContent2);
-        pnContent2.setLayout(pnContent2Layout);
-        pnContent2Layout.setHorizontalGroup(
-            pnContent2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
-        );
-        pnContent2Layout.setVerticalGroup(
-            pnContent2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.ipadx = 694;
-        gridBagConstraints.ipady = 394;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        pnMain2.add(pnContent2, gridBagConstraints);
-
-        pnSideBar2.setBackground(new java.awt.Color(0, 0, 0));
-        pnSideBar2.setMinimumSize(new java.awt.Dimension(100, 394));
-        pnSideBar2.setName("pnSideBar2"); // NOI18N
-
-        javax.swing.GroupLayout pnSideBar2Layout = new javax.swing.GroupLayout(pnSideBar2);
-        pnSideBar2.setLayout(pnSideBar2Layout);
-        pnSideBar2Layout.setHorizontalGroup(
-            pnSideBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        pnSideBar2Layout.setVerticalGroup(
-            pnSideBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 394, Short.MAX_VALUE)
-        );
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        pnMain2.add(pnSideBar2, gridBagConstraints);
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
-        setMinimumSize(new java.awt.Dimension(800, 500));
+        setMinimumSize(new java.awt.Dimension(800, 550));
         setName("Form"); // NOI18N
+        setPreferredSize(new java.awt.Dimension(800, 550));
         getContentPane().setLayout(new java.awt.CardLayout());
 
         pnMain.setBackground(new java.awt.Color(255, 255, 102));
@@ -209,23 +59,23 @@ public class DMSViewMain extends javax.swing.JFrame {
         pnBanner.setName("pnBanner"); // NOI18N
         pnBanner.setPreferredSize(new java.awt.Dimension(800, 50));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/vistahermosa/resources/img/Iconos/LogoAutoMatrix.png"))); // NOI18N
-        jLabel1.setName("jLabel1"); // NOI18N
+        lbLogoDMS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/vistahermosa/resources/img/Iconos/LogoAutoMatrix.png"))); // NOI18N
+        lbLogoDMS.setName("lbLogoDMS"); // NOI18N
 
-        jButton1.setBackground(new java.awt.Color(204, 204, 204));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/vistahermosa/resources/img/Iconos/iOff.png"))); // NOI18N
-        jButton1.setMinimumSize(new java.awt.Dimension(50, 50));
-        jButton1.setName("jButton1"); // NOI18N
-        jButton1.setPreferredSize(new java.awt.Dimension(50, 50));
+        btLogOut.setBackground(new java.awt.Color(204, 204, 204));
+        btLogOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/vistahermosa/resources/img/Iconos/iOff.png"))); // NOI18N
+        btLogOut.setMinimumSize(new java.awt.Dimension(50, 50));
+        btLogOut.setName("btLogOut"); // NOI18N
+        btLogOut.setPreferredSize(new java.awt.Dimension(50, 50));
 
-        jLabel2.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/vistahermosa/resources/img/Iconos/iUser.png"))); // NOI18N
-        jLabel2.setText("Thomas Mora"); // NOI18N
-        jLabel2.setName("jLabel2"); // NOI18N
+        lbUser.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
+        lbUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/vistahermosa/resources/img/Iconos/iUser.png"))); // NOI18N
+        lbUser.setText("Thomas Mora"); // NOI18N
+        lbUser.setName("lbUser"); // NOI18N
 
-        jLabel3.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        jLabel3.setText("FLORIDA FINE CARS, INC."); // NOI18N
-        jLabel3.setName("jLabel3"); // NOI18N
+        lbCompany.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lbCompany.setText("FLORIDA FINE CARS, INC."); // NOI18N
+        lbCompany.setName("lbCompany"); // NOI18N
 
         javax.swing.GroupLayout pnBannerLayout = new javax.swing.GroupLayout(pnBanner);
         pnBanner.setLayout(pnBannerLayout);
@@ -233,29 +83,31 @@ public class DMSViewMain extends javax.swing.JFrame {
             pnBannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnBannerLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(lbLogoDMS)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 260, Short.MAX_VALUE)
                 .addGroup(pnBannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnBannerLayout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(17, 17, 17))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnBannerLayout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(18, 18, 18)))
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbCompany, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lbUser, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5))
         );
         pnBannerLayout.setVerticalGroup(
             pnBannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnBannerLayout.createSequentialGroup()
-                .addGap(7, 7, 7)
                 .addGroup(pnBannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pnBannerLayout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2))
-                    .addComponent(jLabel1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addGroup(pnBannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(pnBannerLayout.createSequentialGroup()
+                                .addComponent(lbCompany)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lbUser))))
+                    .addGroup(pnBannerLayout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(lbLogoDMS)))
+                .addContainerGap(7, Short.MAX_VALUE))
         );
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -314,7 +166,7 @@ public class DMSViewMain extends javax.swing.JFrame {
 
         btInventory.setBackground(new java.awt.Color(0, 0, 0));
         btInventory.setForeground(new java.awt.Color(255, 255, 255));
-        btInventory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/vistahermosa/resources/img/Iconos/iInventory2.png"))); // NOI18N
+        btInventory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/vistahermosa/resources/img/Iconos/iInventory.png"))); // NOI18N
         btInventory.setText("INVENTORY"); // NOI18N
         btInventory.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btInventory.setName("btInventory"); // NOI18N
@@ -449,26 +301,18 @@ public class DMSViewMain extends javax.swing.JFrame {
     private javax.swing.JButton btDesking;
     private javax.swing.JButton btHome;
     private javax.swing.JButton btInventory;
+    private javax.swing.JButton btLogOut;
     private javax.swing.JButton btParts;
     private javax.swing.JButton btReports;
     private javax.swing.JButton btService;
     private javax.swing.JButton btTraining;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel lbCompany;
+    private javax.swing.JLabel lbLogoDMS;
+    private javax.swing.JLabel lbUser;
     private javax.swing.JPanel pnBanner;
-    private javax.swing.JPanel pnBanner1;
-    private javax.swing.JPanel pnBanner2;
     private javax.swing.JPanel pnContent;
-    private javax.swing.JPanel pnContent1;
-    private javax.swing.JPanel pnContent2;
     private javax.swing.JPanel pnMain;
-    private javax.swing.JPanel pnMain1;
-    private javax.swing.JPanel pnMain2;
     private javax.swing.JPanel pnSideBar;
-    private javax.swing.JPanel pnSideBar1;
-    private javax.swing.JPanel pnSideBar2;
     private javax.swing.JPanel pnSideBarButtons;
     // End of variables declaration//GEN-END:variables
 }
