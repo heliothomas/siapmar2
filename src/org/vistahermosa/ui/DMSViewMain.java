@@ -29,6 +29,10 @@ public class DMSViewMain extends javax.swing.JFrame {
         pnBanner1 = new javax.swing.JPanel();
         pnContent1 = new javax.swing.JPanel();
         pnSideBar1 = new javax.swing.JPanel();
+        pnMain2 = new javax.swing.JPanel();
+        pnBanner2 = new javax.swing.JPanel();
+        pnContent2 = new javax.swing.JPanel();
+        pnSideBar2 = new javax.swing.JPanel();
         pnMain = new javax.swing.JPanel();
         pnBanner = new javax.swing.JPanel();
         pnContent = new javax.swing.JPanel();
@@ -102,6 +106,81 @@ public class DMSViewMain extends javax.swing.JFrame {
                     .addComponent(pnContent1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
+        pnMain2.setBackground(new java.awt.Color(255, 255, 102));
+        pnMain2.setMinimumSize(new java.awt.Dimension(800, 500));
+        pnMain2.setName("pnMain2"); // NOI18N
+        pnMain2.setPreferredSize(new java.awt.Dimension(800, 500));
+        pnMain2.setLayout(new java.awt.GridBagLayout());
+
+        pnBanner2.setBackground(new java.awt.Color(153, 0, 0));
+        pnBanner2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        pnBanner2.setName("pnBanner2"); // NOI18N
+        pnBanner2.setPreferredSize(new java.awt.Dimension(800, 100));
+
+        javax.swing.GroupLayout pnBanner2Layout = new javax.swing.GroupLayout(pnBanner2);
+        pnBanner2.setLayout(pnBanner2Layout);
+        pnBanner2Layout.setHorizontalGroup(
+            pnBanner2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        pnBanner2Layout.setVerticalGroup(
+            pnBanner2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 98, Short.MAX_VALUE)
+        );
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 798;
+        gridBagConstraints.ipady = 98;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.FIRST_LINE_START;
+        pnMain2.add(pnBanner2, gridBagConstraints);
+
+        pnContent2.setBackground(new java.awt.Color(255, 255, 255));
+        pnContent2.setName("pnContent2"); // NOI18N
+
+        javax.swing.GroupLayout pnContent2Layout = new javax.swing.GroupLayout(pnContent2);
+        pnContent2.setLayout(pnContent2Layout);
+        pnContent2Layout.setHorizontalGroup(
+            pnContent2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 700, Short.MAX_VALUE)
+        );
+        pnContent2Layout.setVerticalGroup(
+            pnContent2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.ipadx = 694;
+        gridBagConstraints.ipady = 394;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        pnMain2.add(pnContent2, gridBagConstraints);
+
+        pnSideBar2.setBackground(new java.awt.Color(0, 0, 0));
+        pnSideBar2.setMinimumSize(new java.awt.Dimension(100, 394));
+        pnSideBar2.setName("pnSideBar2"); // NOI18N
+
+        javax.swing.GroupLayout pnSideBar2Layout = new javax.swing.GroupLayout(pnSideBar2);
+        pnSideBar2.setLayout(pnSideBar2Layout);
+        pnSideBar2Layout.setHorizontalGroup(
+            pnSideBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        pnSideBar2Layout.setVerticalGroup(
+            pnSideBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 394, Short.MAX_VALUE)
+        );
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        pnMain2.add(pnSideBar2, gridBagConstraints);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
         setMinimumSize(new java.awt.Dimension(800, 500));
@@ -110,8 +189,15 @@ public class DMSViewMain extends javax.swing.JFrame {
         getContentPane().setLayout(new java.awt.CardLayout());
 
         pnMain.setBackground(new java.awt.Color(255, 255, 102));
+        pnMain.setMinimumSize(new java.awt.Dimension(800, 500));
         pnMain.setName("pnMain"); // NOI18N
-        pnMain.setLayout(new java.awt.GridBagLayout());
+        pnMain.setPreferredSize(new java.awt.Dimension(800, 500));
+        java.awt.GridBagLayout pnMainLayout = new java.awt.GridBagLayout();
+        new java.awt.GridBagLayout().columnWidths = new int[] {0, 5, 0};
+        new java.awt.GridBagLayout().rowHeights = new int[] {0, 5, 0};
+        new java.awt.GridBagLayout().columnWeights = new double[] {0.0};
+        new java.awt.GridBagLayout().rowWeights = new double[] {0.0};
+        pnMain.setLayout(pnMainLayout);
 
         pnBanner.setBackground(new java.awt.Color(153, 0, 0));
         pnBanner.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -132,10 +218,12 @@ public class DMSViewMain extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.ipadx = 798;
         gridBagConstraints.ipady = 98;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.weightx = 1.0;
         pnMain.add(pnBanner, gridBagConstraints);
 
         pnContent.setBackground(new java.awt.Color(255, 255, 255));
@@ -145,7 +233,7 @@ public class DMSViewMain extends javax.swing.JFrame {
         pnContent.setLayout(pnContentLayout);
         pnContentLayout.setHorizontalGroup(
             pnContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 694, Short.MAX_VALUE)
+            .addGap(0, 700, Short.MAX_VALUE)
         );
         pnContentLayout.setVerticalGroup(
             pnContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,9 +243,12 @@ public class DMSViewMain extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.ipadx = 694;
         gridBagConstraints.ipady = 394;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
         pnMain.add(pnContent, gridBagConstraints);
 
         pnSideBar.setBackground(new java.awt.Color(0, 0, 0));
@@ -173,12 +264,13 @@ public class DMSViewMain extends javax.swing.JFrame {
         );
         pnSideBarLayout.setVerticalGroup(
             pnSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 394, Short.MAX_VALUE)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         pnMain.add(pnSideBar, gridBagConstraints);
 
@@ -226,11 +318,15 @@ public class DMSViewMain extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel pnBanner;
     private javax.swing.JPanel pnBanner1;
+    private javax.swing.JPanel pnBanner2;
     private javax.swing.JPanel pnContent;
     private javax.swing.JPanel pnContent1;
+    private javax.swing.JPanel pnContent2;
     private javax.swing.JPanel pnMain;
     private javax.swing.JPanel pnMain1;
+    private javax.swing.JPanel pnMain2;
     private javax.swing.JPanel pnSideBar;
     private javax.swing.JPanel pnSideBar1;
+    private javax.swing.JPanel pnSideBar2;
     // End of variables declaration//GEN-END:variables
 }
